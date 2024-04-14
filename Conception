@@ -1,0 +1,24 @@
+structure de la DB:
+ - logs{
+    '_id': ObjectId,
+    "type": "event",
+    "timestamp": datetime.now()
+    "message": message
+    }
+
+ - urls{
+    '_id': ObjectId,
+    'url': url,
+    'scope': scope,
+    'status': 'pending', 'processing', 'completed'
+ }
+
+ - pages_metadata {
+    '_id': ObjectId,
+    "url": url['url'], "html": response.text,
+    "scrapping_date": datetime.now(),
+    "title": title_tag,
+    "header_tags": header_tags,
+    "bold_tags": bold_tags,
+    "italic_tags": italic_tags,
+ }
